@@ -102,10 +102,10 @@ if not MULTIPLE_DB:
 # 4. BOT MEDIA & UI ASSETS
 # ==============================================================================
 # UI Banner & Poster Images
-PICS_URL = (environ.get('PICS_URL', 'https://api.aniwallpaper.workers.dev/random?type=girl')).split()
-PICS = (environ.get('PICS', 'https://graph.org/file/56b5deb73f3b132e2bb73.jpg https://graph.org/file/5303692652d91d52180c2.jpg https://graph.org/file/425b6f46efc7c6d64105f.jpg https://graph.org/file/876867e761c6c7a29855b.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://graph.org/file/56b5deb73f3b132e2bb73.jpg")
+PICS_URL = (environ.get('PICS_URL', 'https://i.postimg.cc/Pf0D4kWv/download-(1).jpg')).split()
+PICS = (environ.get('PICS', 'https://i.postimg.cc/PrmCQvf6/Red-ghost.jpg https://i.postimg.cc/5tzTXJSm/Couples-aesthetic-photo-poses-anime-photo-poses.jpg https://i.postimg.cc/kgbfcc6T/download-(3).jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://i.postimg.cc/fRnxwhyq/no-img.jpg")
+MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://i.postimg.cc/9QhJL9dD/Banner.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = environ.get('SUBSCRIPTION', 'https://graph.org/file/242b7f1b52743938d81f1.jpg')
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split()
@@ -187,7 +187,7 @@ LINK_PREVIEW = is_enabled(environ.get('LINK_PREVIEW', "False"), False)
 ABOVE_PREVIEW = is_enabled(environ.get('ABOVE_PREVIEW', "True"), True)
 
 # The Movie Database (TMDB) API Key
-TMDB_API_KEY = environ.get('TMDB_API_KEY', '')
+TMDB_API_KEY = environ.get('TMDB_API_KEY', '5d23b56f9a9cb88109c78ce731afcc09')
 TMDB_POSTER = is_enabled(environ.get('TMDB_POSTER', "True"), True)
 TMDB_ON_SEARCH = is_enabled(environ.get('TMDB_ON_SEARCH', "False"), False)
 LANDSCAPE_POSTER = is_enabled(environ.get('LANDSCAPE_POSTER', "True"), True)

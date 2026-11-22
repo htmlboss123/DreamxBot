@@ -28,45 +28,45 @@ def is_enabled(value, default: bool = False) -> bool:
 # 1. BOT CREDENTIALS & SESSION
 # ==============================================================================
 # Telegram API credentials from https://my.telegram.org
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '23565903'))
+API_HASH = environ.get('API_HASH', '2a87af806641e62069aac6fb658675d6')
 
 # Bot token obtained from @BotFather
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7838774133:AAGeReT0rh6xmF3eowgL5XIrjWGkD3BI6ZM')
 
 # Pyrogram session name
 SESSION = environ.get('SESSION', 'dreamxbotz_search')
 SESSION_NAME = str(environ.get('SESSION_NAME', 'dreamXBotz'))
-name = str(environ.get('name', 'DREAMXBOTZ'))
+name = str(environ.get('name', 'RIYA'))
 
 
 # ==============================================================================
 # 2. ADMINS, CHANNELS & PERMISSIONS
 # ==============================================================================
 # Telegram user IDs of bot administrators (space-separated in .env)
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '634637418').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2020224264').split()]
 
 # Channels to auto-index files from (Bot must be an admin in these channels)
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001834715749').split()]
 
 # Logging & Storage Channels
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-100'))            # General activity & error logs
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-100'))            # File storage / binary cache channel
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-100'))          # Premium subscription logs
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-100').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003921911858'))            # General activity & error logs
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1004316850181'))            # File storage / binary cache channel
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1004351870041'))          # Premium subscription logs
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1004363820958').split()]
 
 # Support Group & Request Channel
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-100')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002126180963')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/moviecorner210')
 
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-100')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 
 # Force Subscription Channels (Users must join these before using the bot)
-auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")
-auth_channels = environ.get("AUTH_CHANNELS", "-100")
+auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1004341676211")
+auth_channels = environ.get("AUTH_CHANNELS", "-1004302503497")
 AUTH_REQ_CHANNELS = [int(ch) for ch in auth_req_channels.split() if ch and id_pattern.match(ch)]
 AUTH_CHANNELS = [int(ch) for ch in auth_channels.split() if ch and id_pattern.match(ch)]
 
@@ -76,18 +76,18 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 
 # Social & Community Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/dreamxbotz')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/dreamxbotz')
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/dreamxbotz')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviecorner210')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/NONE_090')
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/moviecorner210')
 
 
 # ==============================================================================
 # 3. DATABASE CONFIGURATION (MongoDB)
 # ==============================================================================
 # Primary MongoDB Connection URI & Database details
-DATABASE_URI = environ.get('DATABASE_URI', '')
+DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://yadavyogidra_db_user:omY209gspcWLC4y3@cluster0.zvq30sc.mongodb.net')
 DATABASE_NAME = environ.get('DATABASE_NAME', 'Cluster0')
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'dreamcinezone_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'DARKKNIGHT')
 
 # Secondary MongoDB for multiple DB load balancing
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False)
@@ -201,9 +201,9 @@ LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-100'))
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
 # Tutorial Links
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/dreamxbotz")
-TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/dreamxbotz")
-TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/dreamxbotz")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/moviecorner210")
+TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/moviecorner210")
+TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/moviecorner210")
 
 # Primary Shortener
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "")

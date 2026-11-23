@@ -56,9 +56,9 @@ PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1004351870041'))          # Pre
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1004363820958').split()]
 
 # Support Group & Request Channel
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002126180963')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1004433656920')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/moviecorner210')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+RYWQwhZvlellMzc1')
 
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-100')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
@@ -78,7 +78,7 @@ PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in envir
 # Social & Community Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviecorner210')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/NONE_090')
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/moviecorner210')
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/aristudioz')
 
 
 # ==============================================================================
@@ -145,10 +145,10 @@ MAINTENANCE = is_enabled(environ.get('MAINTENANCE', "False"), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
-MSG_ALRT = environ.get('MSG_ALRT', 'Share & Support Us ♥️')
+MSG_ALRT = environ.get('MSG_ALRT', Aʀɪ Sᴛᴜᴅɪᴏ ♥️')
 
 # IMDB Settings
-IMDB = is_enabled(environ.get('IMDB', "True"), False)
+IMDB = is_enabled(environ.get('IMDB', "False"), False)
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 
 # Languages & Media Qualities Seasons
@@ -225,7 +225,7 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))   # 15 hours
 # ==============================================================================
 # 8. PREMIUM PLANS & PAYMENT CONFIGURATION
 # ==============================================================================
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/e419f801841c2ee3db0fc.jpg')
+QR_CODE = environ.get('QR_CODE', 'https://i.postimg.cc/jddNNnM2/photo-6062180982523105884-y.jpg')
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'ɴᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ')
 
 # Stars / Premium Pricing Structure {Amount: "Duration"}

@@ -18,7 +18,7 @@ from database.ia_filterdb import Media, Media2, get_file_details, unpack_new_fil
 from database.users_chats_db import db
 from info import (
     LOG_CHANNEL, IMDB_TEMPLATE, IS_VERIFY, TUTORIAL, TUTORIAL_2, TUTORIAL_3, EMOJI_MODE, REACTIONS,
-    VERIFY_IMG, TWO_VERIFY_GAP, UPDATE_CHNL_LNK, PICS, PICS_URL, ADMINS, SUBSCRIPTION, OWNER_LNK , 
+    VERIFY_IMG, TWO_VERIFY_GAP, , PICS, PICS_URL, ADMINS, SUBSCRIPTION, OWNER_LNK , 
     OWNER_UPI_ID, QR_CODE, AUTH_CHANNELS, AUTH_REQ_CHANNELS, FSUB_PICS, THREE_VERIFY_GAP, CUSTOM_FILE_CAPTION,
     COVERX, PROTECT_CONTENT, DELETE_TIME, PREMIUM_STREAM_MODE, STREAM_MODE, SUPPORT_CHAT_ID, REQST_CHANNEL,
     LOG_CHANNEL, SHORTENER_API, SHORTENER_API2, SHORTENER_API3, SHORTENER_WEBSITE, SHORTENER_WEBSITE2, SHORTENER_WEBSITE3,
@@ -87,9 +87,9 @@ async def start(client, message):
             return         
         if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             buttons = [[
-                        InlineKeyboardButton('❤️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('❤️ Aᴅᴅ Tᴏ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                     ],[
-                        InlineKeyboardButton('🍁 Update Channel 🍁', url=UPDATE_CHNL_LNK)
+                        InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ 🍁', url=UPDATE_CHNL_LNK)
                       ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, link_preview_options=LinkPreviewOptions(is_disabled=True))
@@ -105,13 +105,13 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
         if len(message.command) != 2:
             buttons = [[
-                        InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('🔰 Aᴅᴅ Tᴏ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                     ],[
-                        InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
-                        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
+                        InlineKeyboardButton('Hᴇʟᴘ 📢', callback_data='help'),
+                        InlineKeyboardButton('Aʙᴏᴜᴛ 📖', callback_data='about')
                     ],[
-                        InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                        InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
+                        InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
+                        InlineKeyboardButton('Uᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             current_time = datetime.now(TZ)
@@ -148,13 +148,13 @@ async def start(client, message):
 
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
-                        InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                        InlineKeyboardButton('🔰 Aᴅᴅ Tᴏ Mᴇ Yᴏᴜʀ Gʀᴏᴜᴘ 🔰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                     ],[
-                        InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
-                        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about')
+                        InlineKeyboardButton('Hᴇʟᴘ 📢', callback_data='help'),
+                        InlineKeyboardButton('Aʙᴏᴜᴛ 📖', callback_data='about')
                     ],[
-                        InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                        InlineKeyboardButton('ᴜᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
+                        InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
+                        InlineKeyboardButton('Uᴘɢʀᴀᴅᴇ 🎟', callback_data="premium_info"),
                     ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             current_time = datetime.now(TZ)
@@ -523,29 +523,33 @@ async def stream_buttons(user_id: int, file_id: str):
         return [
             [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
             [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}')],
-            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url="https://t.me/aristudioz")]
         ]
+
     elif STREAM_MODE and PREMIUM_STREAM_MODE:
         if not await db.has_premium_access(user_id):
             return [
                 [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data='prestream')],
                 [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data='prestream')],
-                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url="https://t.me/aristudioz")]
             ]
         else:
             return [
                 [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
                 [InlineKeyboardButton('ℹ️ ᴠɪᴇᴡ ᴀᴜᴅɪᴏ & ꜱᴜʙꜱ ɪɴꜰᴏ ℹ️', callback_data=f'extract_data:{file_id}')],
-                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]
+                [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url="https://t.me/aristudioz")]
             ]
+
     else:
-        return [[InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=UPDATE_CHNL_LNK)]]
+        return [
+            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url="https://t.me/aristudioz")]
+        ]
     
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(client, message):
     """Send log file"""
     try:
-        await message.reply_document('DreamXlogs.txt', caption="📑 **ʟᴏɢꜱ**")
+        await message.reply_document('AriStudio.txt', caption="📑 **ʟᴏɢꜱ**")
     except Exception as e:
         await message.reply(str(e))
 
@@ -1102,7 +1106,7 @@ async def set_tutorial(client, message: Message):
     except IndexError:
         return await message.reply_text(
             f"<b>ᴄᴏᴍᴍᴀɴᴅ ɪɴᴄᴏᴍᴘʟᴇᴛᴇ !!\n\nᴜꜱᴇ ʟɪᴋᴇ ᴛʜɪꜱ -</b>\n\n"
-            f"<code>/{message.command[0]} https://t.me/dreamxbotz</code>"
+            f"<code>/{message.command[0]} https://t.me/aristudioz</code>"
         )
     if message.command[0] == "set_tutorial":
         tutorial_key = "tutorial"

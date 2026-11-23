@@ -108,7 +108,7 @@ NOR_IMG = environ.get("NOR_IMG", "https://i.postimg.cc/fRnxwhyq/no-img.jpg")
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://i.postimg.cc/9QhJL9dD/Banner.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = environ.get('SUBSCRIPTION', 'https://graph.org/file/242b7f1b52743938d81f1.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split()
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://i.postimg.cc/FFLcQpc8/Gemini-Generated-Image-ff8688ff8688ff86.png')).split()
 
 # Timezone settings
 TIMEZONE = environ.get('TIMEZONE', 'Asia/Kolkata')

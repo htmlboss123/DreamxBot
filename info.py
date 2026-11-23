@@ -145,7 +145,7 @@ MAINTENANCE = is_enabled(environ.get('MAINTENANCE', "False"), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
-MSG_ALRT = environ.get('MSG_ALRT', Aʀɪ Sᴛᴜᴅɪᴏ ♥️')
+MSG_ALRT = environ.get('MSG_ALRT', 'Aʀɪ Sᴛᴜᴅɪᴏ ♥️')
 
 # IMDB Settings
 IMDB = is_enabled(environ.get('IMDB', "False"), False)
